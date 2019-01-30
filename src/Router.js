@@ -25,8 +25,8 @@ export default class Router extends React.Component{
     }
 
     home(){
-        if(UserSignedIn) return Home;
-        return Dashboard;
+        if(UserSignedIn) return Dashboard;
+        return Home;
     }
 
     render(){
