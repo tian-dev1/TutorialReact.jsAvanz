@@ -20,8 +20,8 @@ export default class Login extends React.Component{
                         <Container>
                             <div style={{'textAlign':'left'}}>  
                                 <Title/>
-                                <TextField floatingLabelText= "Correo electronico*" required
-                                type="email"
+                                <TextField floatingLabelText= "Nombre de usuario*" required
+                                type="text"
                                 className="textfield"
                                 />
                                 <TextField floatingLabelText= "Contraseña*" required
@@ -29,34 +29,38 @@ export default class Login extends React.Component{
                                 className="textfield"
                                 />
                                 
-                                    <div className="Login-actions">
-                                        <Route path="/login" exact render={() => {
-                                            return(
-                                                <div>
-                                                    <Link to="/signup" style={{marginRight:"1em"}}>Crear nueva cuenta</Link>
-                                                    <RaisedButton label="Ingresar" primary={true} />
-                                                </div>
-                                            );      
-                                        }}></Route>
-                                        <Route path="/signup" exact render={() => {
-                                            return(
-                                                <div>
-                                                    <Link to="/login" style={{marginRight:"1em"}}>Ya tengo cuenta</Link>
-                                                    <RaisedButton label="Crear cuenta" primary={true} />
-                                                </div>
-                                            );      
-                                        }}></Route>
-                                    </div>
+                                <div className="Login-actions">
+                                    <Route path="/login" exact render={() => {
+                                        return(
+                                            <div>
+                                                <Link to="/signup" style={{marginRight:"1em"}}>Crear nueva cuenta</Link>
+                                                <RaisedButton label="Ingresar" primary={true} />
+                                            </div>
+                                        );      
+                                    }}></Route>
+                                    <Route path="/signup" exact render={() => {
+                                        return(
+                                            <div>
+                                                <TextField floatingLabelText= "Correo electronico*" required
+                                                type="email"
+                                                className="textfield"
+                                                />
+                                                <Link to="/login" style={{marginRight:"1em"}}>Ya tengo cuenta</Link>
+                                                <RaisedButton label="Crear cuenta" primary={true} />
+                                            </div>
+                                        );      
+                                    }}></Route>
+                                </div>
                             </div>
                         </Container>
                     </div>
                     <div className="col-xs-12 col-sm-6">
                         <div>
                             <Route path="/login" exact render={() => 
-                                <div className="Login-background" style={{'backgroundImage': "url("+'images/login.jpeg'+")"}}></div>
+                                <div className="Login-background" style={{'backgroundImage': "url("+'images/imagen4.jpeg'+")"}}></div>
                             }></Route>
                             <Route path="/signup" exact render={() => 
-                                <div className="Login-background" style={{'backgroundImage': "url("+'images/imagen4.jpeg'+")"}}></div>
+                                <div className="Login-background" style={{'backgroundImage': "url("+'images/login.jpeg'+")"}}></div>
                             }></Route>
                         </div>
                     </div>

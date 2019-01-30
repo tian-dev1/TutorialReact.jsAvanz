@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import App from './App';
 
 export default class Router extends React.Component{
+
     render(){
         return(
             <ReactRouter>
@@ -17,6 +18,7 @@ export default class Router extends React.Component{
                     <Route exact path="/" component={Home}></Route>
                     <Route path="/login" component={Login}></Route> 
                     <Route path="/signup" component={Login}></Route> 
+                    
                 </App>
             </ReactRouter>
         );
